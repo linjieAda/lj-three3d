@@ -1,0 +1,20 @@
+*.class
+target/*
+.classpath
+.project
+.settings/
+.DS_Store
+#忽略Intellij 文件
+.idea/*
+boss.iml
+#忽略log文件
+root.log
+url-log.log
+*.log.*
+*.log
+/target/
+#打包文件
+/node_modules/**
+/build/**
+npm-debug.log
+.happypack
