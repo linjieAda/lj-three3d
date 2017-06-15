@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+	  <title></title>
+	  <% if (htmlWebpackPlugin.files.favicon) { %>
+	  <link rel="shortcut icon" href="<%= htmlWebpackPlugin.files.favicon%>">
+	  <% } %>
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
+    <script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=BAWjP0Np7X4M2YmrWSZYNN2gDNkSCjmw"></script>
+    <script type="text/javascript" async>
+      (function() {
+        var deviceWidth = document.documentElement.clientWidth > 540 ? 540 : document.documentElement.clientWidth;
+        // console.log('size', deviceWidth / 7.5)
+        document.documentElement.style.fontSize = (deviceWidth / 7.5) + 'px';
+      })();
+
+      // baidu tongji
+      var _hmt = _hmt || [];
+      (function() {
+        var hm = document.createElement("script");
+        hm.src = "https://hm.baidu.com/hm.js?c1358a58cd57cf2738e11a7b6cd9a9ef";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+      })();
+    </script>
+
+	  <% for (var css in htmlWebpackPlugin.files.css) { %>
+	  <link href="<%= htmlWebpackPlugin.files.css[css] %>" rel="stylesheet">
+	  <% } %>
+  </head>
+
+  <body>
+  	<div id="app"></div>
+  </body>
+</html>

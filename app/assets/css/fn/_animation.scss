@@ -1,0 +1,37 @@
+@mixin animation($content) {
+    -webkit-animation: $content;
+    -moz-animation: $content;
+    animation: $content;
+}
+
+@mixin keyframe($content) {
+    -webkit-keyframes: $content;
+    -moz-keyframes: $content;
+    -ms-keyframes: $content;
+    -o-keyframes: $content;
+    keyframes: $content;
+}
+
+@mixin animation-duration($content){
+    -webkit-animation-duration: $content;
+    -moz-animation-duration: $content;
+    -ms-animation-duration: $content;
+    -o-animation-duration: $content;
+    animation-duration: $content;
+}
+
+@mixin animation-fill-mode($content){
+    -webkit-animation-fill-mode: $content;
+    -moz-animation-fill-mode: $content;
+    -ms-animation-fill-mode: $content;
+    -o-animation-fill-mode: $content;
+    animation-fill-mode: $content;
+}
+
+@mixin animation-name($content){
+    -webkit-animation-name: $content;
+    -moz-animation-name: $content;
+    -ms-animation-name: $content;
+    -o-animation-name: $content;
+    animation-name: $content;
+}
