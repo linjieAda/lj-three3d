@@ -49,6 +49,9 @@ function generateHtml(chunck) {
 }
 
 const config = {
+  node: {
+    fs: 'empty'
+  },
   devtool: env === 'dev' && 'source-map',
   entry: generatorEntry(),
   resolve: {
@@ -100,6 +103,11 @@ const config = {
         test: /\.html$/,
         exclude: [nodeModules],
         loader: 'html?name=html/[name].[ext]'
+      },
+      {
+        test: /\.js$/,
+        include: /linebreak/,
+        loader: 'transform?brfs'
       }
     ]
   },
